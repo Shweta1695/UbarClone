@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+     android:orientation="vertical">
+
+        <com.uber.sdk.android.rides.RideRequestView
+            android:id="@+id/ub__ride_request_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.uber.sdk.android.rides.RideRequestView>
+
+<com.uber.sdk.android.core.UberButton
+    android:id="@+id/request_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical|start"
+    android:drawableLeft="@drawable/uber_badge"
+    android:drawablePadding="@dimen/ub__small_padding"
+    android:gravity="center_vertical|start"
+    android:minHeight="@dimen/ub__ride_request_button_height"
+    android:minWidth="@dimen/ub__ride_request_button_width"
+    android:padding="@dimen/ub__standard_padding"
+    android:text="@string/ub__ride_with_uber"
+    android:textSize="@dimen/ub__text_size"/>
+
+
+    <TextView
+        android:id="@+id/time_estimate"
+        android:layout_width="49dp"
+        android:layout_height="36dp"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="@dimen/ub__standard_padding"
+        android:paddingRight="@dimen/ub__standard_padding"
+        android:textSize="@dimen/ub__secondary_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/price_estimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="@dimen/ub__standard_padding"
+        android:paddingRight="@dimen/ub__standard_padding"
+        android:textSize="@dimen/ub__secondary_text_size"
+        android:visibility="gone"/>
+
+</FrameLayout>
